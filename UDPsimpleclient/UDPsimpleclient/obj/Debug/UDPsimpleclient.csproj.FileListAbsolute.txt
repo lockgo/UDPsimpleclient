@@ -1,0 +1,6 @@
+C:\Users\user\Documents\SharpDevelop Projects\UDPsimpleclient\UDPsimpleclient\bin\Debug\UDPsimpleclient.exe.config
+C:\Users\user\Documents\SharpDevelop Projects\UDPsimpleclient\UDPsimpleclient\bin\Debug\UDPsimpleclient.exe
+C:\Users\user\Documents\SharpDevelop Projects\UDPsimpleclient\UDPsimpleclient\bin\Debug\UDPsimpleclient.pdb
+C:\Users\user\Documents\SharpDevelop Projects\UDPsimpleclient\UDPsimpleclient\obj\Debug\UDPsimpleclient.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\SharpDevelop Projects\UDPsimpleclient\UDPsimpleclient\obj\Debug\UDPsimpleclient.exe
+C:\Users\user\Documents\SharpDevelop Projects\UDPsimpleclient\UDPsimpleclient\obj\Debug\UDPsimpleclient.pdb
