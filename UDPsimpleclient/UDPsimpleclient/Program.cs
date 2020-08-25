@@ -18,9 +18,6 @@ namespace UDPsimpleclient
 {
     class Program
     {
-
-
-
     	/// <summary>
     	/// Main client function
     	/// </summary>
@@ -33,10 +30,7 @@ namespace UDPsimpleclient
             
             string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
             string defaultFilename = "main.xml";
-            
-            
             Console.WriteLine(path);
-
             Console.WriteLine("Please pick the path of the file you wish to send to the server. if the default is ok please type no.");
             string pathdecision = Console.ReadLine();
             Console.WriteLine("Please type the file name you wish to send to server, otherwise type no if the default is ok.");
@@ -56,9 +50,7 @@ namespace UDPsimpleclient
             string input, stringData;
             //IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("192.168.0.59"), 4444);
             IPEndPoint ipep = new IPEndPoint(IPAddress.Parse(ipaddress), portnumber);
-
             Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-
 
             string welcome = "Hello, are you there?";
             data = Encoding.ASCII.GetBytes(welcome);
@@ -72,8 +64,6 @@ namespace UDPsimpleclient
 
             Console.WriteLine("Message received from {0}:", Remote.ToString());
             Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
-
-
             //Console.WriteLine(path);
             //foreach (string line in lines)        {                       Console.WriteLine("\t" + line);        }// Use a tab to indent each line of the file.
             int i = 0;
@@ -100,7 +90,6 @@ namespace UDPsimpleclient
                     input = Console.ReadLine();
                     if (input == "exit") break;
                     if (input == "again") i = 0;
-
                     server.SendTo(Encoding.ASCII.GetBytes(input), Remote);
                 }
 
