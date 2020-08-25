@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: user
  * Date: 8/14/2020
@@ -30,9 +30,27 @@ namespace UDPsimpleclient
         	string ipaddress = Console.ReadLine();
         	Console.WriteLine("Which port do you want to use?");
             int portnumber = Int32.Parse(Console.ReadLine());
+            
             string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
-            string[] lines = File.ReadAllLines(path + "/main.xml");
+            string defaultFilename = "main.xml";
+            
+            
             Console.WriteLine(path);
+
+            Console.WriteLine("Please pick the path of the file you wish to send to the server. if the default is ok please type no.");
+            string pathdecision = Console.ReadLine();
+            Console.WriteLine("Please type the file name you wish to send to server, otherwise type no if the default is ok.");
+            string filename = Console.ReadLine();
+            string[] lines;
+            if (pathdecision == "no")
+            {
+                lines = File.ReadAllLines(path + "/" + defaultFilename);
+            }
+            else
+            {
+                lines = File.ReadAllLines(pathdecision + "/" + filename);
+            }
+            
 
             byte[] data = new byte[1024];
             string input, stringData;
