@@ -36,12 +36,18 @@ namespace UDPsimpleclient
             Console.WriteLine("Please type the file name you wish to send to server, otherwise type no if the default is ok.");
             string filename = Console.ReadLine();
             string[] lines;
+            string finalpath = "";
+            string finalName = "";
             if (pathdecision == "no")
             {
+                finalpath = path;
+                finalName = defaultFilename;
                 lines = File.ReadAllLines(path + "/" + defaultFilename);
             }
             else
             {
+                finalpath = pathdecision;
+                finalName = filename;
                 lines = File.ReadAllLines(pathdecision + "/" + filename);
             }
             
@@ -70,7 +76,7 @@ namespace UDPsimpleclient
 
             while (true)
             {
-            	string md5Hashed = CalculateMD5(path + "/main.xml");
+                string md5Hashed = CalculateMD5(finalpath + "/" + finalName);
             	Console.WriteLine(md5Hashed);
                 if (i < lines.Length)
                 {
